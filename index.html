@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard · ESP32 DHT22</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="app">
+<aside class="sidebar"><div class="brand"><span class="brand-icon">🌡️</span><div><strong>IoT Monitor</strong><small>ESP32 + DHT22</small></div></div>
+<nav class="nav"><a class="active" href="index.html">📊 <span>Dashboard</span></a><a class="" href="history.html">📈 <span>History</span></a><a class="" href="connection.html">🔌 <span>Connection</span></a><a class="" href="settings.html">⚙️ <span>Settings</span></a><a class="" href="about.html">ℹ️ <span>About</span></a></nav><div class="sidebar-status"><span class="dot"></span><span id="sideStatus">Not connected</span></div></aside>
+<main class="main">
+<header class="topbar"><div><h1>Dashboard</h1><p>Real-time temperature and humidity monitoring</p></div><div class="connection-pill"><span class="dot"></span><span id="connectionText">Disconnected</span></div></header>
+<section class="hero"><div><span class="eyebrow">LIVE MONITORING</span><h2>ESP32 Environment</h2><p>Data from your DHT22 sensor through Firebase Realtime Database.</p></div><a class="btn primary" href="connection.html">Configure Firebase</a></section>
+<section class="grid-3">
+<article class="card"><div class="stat-icon">🌡️</div><div class="label">Temperature</div><div class="value"><span id="temperature">--</span><small>°C</small></div><div class="muted" id="temperatureTime">Waiting for data...</div></article>
+<article class="card"><div class="stat-icon">💧</div><div class="label">Humidity</div><div class="value"><span id="humidity">--</span><small>%</small></div><div class="muted" id="humidityTime">Waiting for data...</div></article>
+<article class="card"><div class="stat-icon">🔄</div><div class="label">Refresh interval</div><div class="value"><span id="refreshValue">3</span><small>s</small></div><div class="muted">Automatic Firebase polling</div></article>
+</section>
+<section class="card chart-card"><div class="section-head"><div><h3>Live history</h3><p>Up to 60 readings stored in this browser</p></div><a class="btn secondary" href="history.html">View history</a></div>
+<div class="legend"><span><i class="temp-dot"></i>Temperature</span><span><i class="hum-dot"></i>Humidity</span></div><canvas id="chart"></canvas></section>
+<div id="errorBox" class="notice hidden"></div>
+</main></div><script src="js/app.js"></script></body></html>

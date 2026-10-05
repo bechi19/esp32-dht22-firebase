@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connection · ESP32 DHT22</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="app">
+<aside class="sidebar"><div class="brand"><span class="brand-icon">🌡️</span><div><strong>IoT Monitor</strong><small>ESP32 + DHT22</small></div></div>
+<nav class="nav"><a class="" href="index.html">📊 <span>Dashboard</span></a><a class="" href="history.html">📈 <span>History</span></a><a class="active" href="connection.html">🔌 <span>Connection</span></a><a class="" href="settings.html">⚙️ <span>Settings</span></a><a class="" href="about.html">ℹ️ <span>About</span></a></nav><div class="sidebar-status"><span class="dot"></span><span id="sideStatus">Not connected</span></div></aside>
+<main class="main">
+<header class="topbar"><div><h1>Connection</h1><p>Configure your Firebase Realtime Database</p></div></header>
+<section class="card form-card"><div class="stat-icon">🔥</div><h2>Firebase configuration</h2><p class="muted">Enter the Firebase database host without <code>https://</code> or the final slash.</p>
+<label for="host">Firebase host</label><input id="host" type="text" value="test-1d6cf-default-rtdb.europe-west1.firebasedatabase.app" placeholder="your-project-default-rtdb.europe-west1.firebasedatabase.app">
+<button class="btn primary" id="saveConnection">Save & Connect</button><div id="connectionMessage" class="message">No connection configured.</div></section>
+<section class="card"><h3>Expected database data</h3><p class="muted">Your ESP32 sketch sends these two values to the Firebase database root:</p><pre>{
+  "humidity": 52.3,
+  "temperature": 24.5
+}</pre></section>
+</main></div><script src="js/app.js"></script></body></html>

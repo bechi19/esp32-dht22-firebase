@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About · ESP32 DHT22</title><link rel="stylesheet" href="css/style.css"></head>
+<body><div class="app">
+<aside class="sidebar"><div class="brand"><span class="brand-icon">🌡️</span><div><strong>IoT Monitor</strong><small>ESP32 + DHT22</small></div></div>
+<nav class="nav"><a class="" href="index.html">📊 <span>Dashboard</span></a><a class="" href="history.html">📈 <span>History</span></a><a class="" href="connection.html">🔌 <span>Connection</span></a><a class="" href="settings.html">⚙️ <span>Settings</span></a><a class="active" href="about.html">ℹ️ <span>About</span></a></nav><div class="sidebar-status"><span class="dot"></span><span id="sideStatus">Not connected</span></div></aside>
+<main class="main">
+<header class="topbar"><div><h1>About</h1><p>ESP32 + DHT22 → Firebase Realtime Database</p></div></header>
+<section class="hero"><div><span class="eyebrow">IOT PROJECT</span><h2>Environmental monitoring</h2><p>The ESP32 reads a DHT22 sensor and sends temperature and humidity to Firebase over HTTPS.</p></div></section>
+<div class="info-grid"><section class="card"><h3>🌡️ DHT22</h3><p>The sensor provides temperature and humidity. In your firmware it is connected to <strong>GPIO 4</strong>.</p></section>
+<section class="card"><h3>📡 ESP32</h3><p>The firmware connects to Wi-Fi and sends readings every 2 seconds using HTTP PATCH.</p></section>
+<section class="card"><h3>🔥 Firebase</h3><p>The Realtime Database stores the <code>temperature</code> and <code>humidity</code> values at the database root.</p></section>
+<section class="card"><h3>💻 Dashboard</h3><p>This web interface polls Firebase, displays live values, and keeps up to 60 readings locally for charts and history.</p></section></div>
+</main></div><script src="js/app.js"></script></body></html>
